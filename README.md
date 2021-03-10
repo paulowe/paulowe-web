@@ -1,5 +1,5 @@
 
-# Hello World 
+# Welcome to Paul's homepage
 
 ![MIT_MagicalThinking_Sketch2](https://user-images.githubusercontent.com/40435982/110564077-569cf280-815d-11eb-94f1-526146ce6e9f.gif)
 
