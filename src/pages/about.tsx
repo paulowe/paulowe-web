@@ -58,12 +58,12 @@ function About({ data, summaries }: Props) {
                 >
                   BMO Financial Group
                 </a>
-                . He helps the organization with it&apos;s data challenges, from
-                ensuring the architecture meets the business needs to attaining
-                robust insights, and uncovering missed opportunities. With his
-                expertise in Data Engineering, and a myriad of capabilities, he
-                enables the Digital Acquisition business effectively leverage
-                Data and AI-driven strategies.
+                . He helps the organization with a variety of data challenges,
+                from ensuring the architecture meets the business needs to
+                attaining robust insights, and uncovering missed opportunities.
+                With his expertise in Data Engineering, and a myriad of
+                capabilities, he enables the Digital Acquisition business
+                effectively leverage Data and AI-driven strategies.
               </p>
               <p>
                 Before BMO, he worked as a Business System Analyst at{' '}
@@ -79,7 +79,7 @@ function About({ data, summaries }: Props) {
                 robust analytics and reporting solutions that encompass all
                 banking verticals (including payments, mututal funds, lending,
                 and insurance) to ensure business rules for revealing fraud and
-                money laundering evolve in step with offenders' practices.
+                money laundering evolve in step with offenders practices.
               </p>
 
               <p>
