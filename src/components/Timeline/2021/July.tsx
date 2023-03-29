@@ -89,7 +89,7 @@ export function July() {
         </div>
       </TimelineEntry>
       <TimelineEntry
-        title="Academic Innovation Fund: Complete software specification"
+        title="Transforming Education with Open Resources and Shared Maps"
         timestamp="July 14, 2021"
         Icon={Camera}
         tint="blue"
@@ -97,9 +97,11 @@ export function July() {
         <div className="flex flex-col overflow-hidden transition-shadow bg-white rounded-md shadow md:flex-row dark:bg-gray-900 hover:shadow-cardHover">
           <div className="flex flex-col justify-start px-3 py-3 space-y-2 md:w-1/2">
             <p className="flex px-2 font-normal">
-              This video submission to the Office of the Associate VP Teaching
-              and Learning at York University describes the full list of
-              functionalities I developed for the web mapping innovation project
+              My video submission to the Office of the Associate Vice-President,
+              Teaching and Learning at York University reimagines education by
+              harnessing the power of open resources that can be easily shared
+              and integrated into lessons, providing learners a visual and
+              interactive way to explore topics and ideas
             </p>
             <span />
             <a

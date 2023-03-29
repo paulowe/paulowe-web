@@ -42,7 +42,7 @@ function About({ data, summaries }: Props) {
           <div className="flex flex-col space-y-12">
             <div className="flex flex-col prose lg:prose-lg">
               <p>
-                Hey, I&apos;m Paul. Welcome to my corner of the internet! I
+                Hey, I&apos;m Paul. I am a Data and Machine Learning Engineer! I
                 currently work at{' '}
                 <a
                   href="https://www.bmo.com/main/about-bmo/"
@@ -71,10 +71,11 @@ function About({ data, summaries }: Props) {
                 solutions. I am responsible for designing, implementing, and
                 maintaining scalable, secure, and cost-effective cloud-based
                 solutions that meet the needs of the business. This includes
-                designing pipelines, ensuring data quality, and developing
-                distributed data processing systems. I work closely with data
-                scientists, analysts, and other stakeholders to ensure the data
-                infrastructure meets their needs.
+                designing pipelines, developing software that runs on
+                distributed data processing systems, and productionizing machine
+                learning models. I work closely with data scientists, analysts,
+                and other stakeholders to ensure the data infrastructure meets
+                their needs.
               </p>
               <p>
                 Before BMO, I worked as a Data Integration Specialist at{' '}
@@ -129,9 +130,9 @@ function About({ data, summaries }: Props) {
 
             <div className="flex flex-col space-y-4">
               <div className="flex flex-col space-y-1">
-                <h4>Writing</h4>
+                <h4>AI Blog</h4>
 
-                <p className="text-lg">Thoughts, stories and ideas.</p>
+                <p className="text-lg">Ideas, analysis and strategy.</p>
               </div>
 
               {data && data.posts && <OverthoughtList posts={data.posts} />}
@@ -143,14 +144,14 @@ function About({ data, summaries }: Props) {
                   </a>
                 </Link>
 
-                <a
+                {/* <a
                   href="https://paulsmessage.com/rss/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 dark:text-blue-500"
                 >
                   Subscribe via RSS &rarr;
-                </a>
+                </a> */}
               </div>
             </div>
 

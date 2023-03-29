@@ -15,11 +15,11 @@ export default function OverthoughtSEO() {
       </Head>
       <NextSeo
         title={"Paul's Message"}
-        description={'Thoughts, stories and ideas.'}
+        description={'Ideas, analysis and strategy.'}
         openGraph={{
           url: 'https://paulowe.com/paulsmessage',
           title: "Paul's Message",
-          description: 'Thoughts, stories and ideas.',
+          description: 'Ideas, analysis and strategy.',
           site_name: "Paul's Message",
           images: [
             {

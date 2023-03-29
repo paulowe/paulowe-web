@@ -56,17 +56,21 @@ export function January() {
         </div>
       </TimelineEntry>
       <TimelineEntry
-        title="BEST Startup of the Year Award"
+        title="First Place Award: Bergeron Entrepreneurs in Science and Technology (BEST)"
         timestamp="January 7, 2020"
         Icon={Camera}
       >
         <Notes>
           <p>
             I particiapted in the BEST Startup experience sponsored by Rogers,
-            IBM, and KPM Power, where my team emerged first place after we
-            demonstrated our plan to help students reach their full potential
-            and achieve better mental health through an intuitive app that acts
-            as a dashboard of students’ school, work and social needs.{' '}
+            IBM, and KPM Power. My team developed and presented our
+            comprehensive business plan that focused on promoting mental
+            wellness and unlocking the full potential of students through an
+            innovative and intuitive application. Our winning idea involves an
+            app acting as a dashboard that integrates students’ school, work,
+            and social needs. This experience provided an invaluable opportunity
+            to enhance my skills and knowledge in the field of entrepreneurship
+            and innovation.{' '}
             <a
               target="_blank"
               rel="noopener noreferrer"

@@ -8,10 +8,15 @@ export function March() {
     <>
       <DateEntry title="Present" />
       <TimelineEntry
-        title="Google - BMO Ads, Cloud and Analytics Session"
+        title="Google and BMO's Analytics Teams Meet in Toronto"
         timestamp="March 16, 2023"
         Icon={Camera}
       >
+        <p>
+          Innovation takes center stage as Google and BMO&apos;s Cloud and
+          Advanced Analytics teams convene to share expertise and insights on
+          the future of marketing.
+        </p>
         <div className="grid grid-cols-2 grid-rows-2 gap-2">
           <Image
             src="https://d2fl8krjhnb3wd.cloudfront.net/static/photos/analytics-h0.png"
@@ -40,7 +45,7 @@ export function March() {
         </div>
       </TimelineEntry>
       <TimelineEntry
-        title="Fine-Grained Visual Categorization of Crops with CropNet CNN"
+        title="Tanzania Cassava Disease Image Classification"
         timestamp="March 11, 2023"
         Icon={GitCommit}
         tint="red"
@@ -48,16 +53,16 @@ export function March() {
         <div className="flex flex-col overflow-hidden transition-shadow bg-white rounded-md shadow md:flex-row dark:bg-gray-900 hover:shadow-cardHover">
           <div className="flex flex-col justify-start px-3 py-3 space-y-2 md:w-1/2">
             <p className="flex-1 px-2 font-normal">
-              This notebook guides you through the process of training a deep
-              learning Convolutional Neural Network model for image
-              classification. The final model is an ensemble that uses 1
-              pretrained classifier and 4 feature vectors.
+              This notebook demonstrates how I trained an ensemble ConvNet for
+              image classification on the iCassava 2019 dataset. The project
+              aims to create a powerful model to support sustainable agriculture
+              and help secure the future of farming in Tanzania.
             </p>
             <span />
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="/static/docs/CW2_TzCropNet-Final.html"
+              href="/static/docs/CropNet-4-Tanzania.html"
             >
               <div className="btn">
                 <span>View Notebook</span>

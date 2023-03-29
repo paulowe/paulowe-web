@@ -27,7 +27,7 @@ export function July() {
         <>
           <Notes>
             <p>
-              Today I attended the{' '}
+              I attended the{' '}
               <a
                 href="https://pages.awscloud.com/aws-africa-region-virtual-day#form-2"
                 target="_blank"

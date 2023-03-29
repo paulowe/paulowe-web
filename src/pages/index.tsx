@@ -12,7 +12,7 @@ function Home() {
           <div className="flex flex-col space-y-8 md:items-center">
             <PageHeader
               title="Paul Owe"
-              subtitle="Accelerating digital transformation with cutting-edge data and AI-driven enterprise solutions"
+              subtitle="I help companies achieve measurable business value with data and AI-driven enterprise solutions"
             />
 
             <div className="flex flex-col space-y-2 md:space-x-4 md:flex-row md:space-y-0 md:items-center md:justify-center">

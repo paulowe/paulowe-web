@@ -8,7 +8,7 @@ export function June() {
     <>
       <DateEntry title="June, 2021" />
       <TimelineEntry
-        title="Undergraduate Research Fair: Mapping FSL Twitter"
+        title="Exploring the Global Reach of Bilingualism on Twitter: A Geographic Visualization Study"
         timestamp="June 05, 2021"
         Icon={Camera}
         tint="red"
@@ -16,11 +16,12 @@ export function June() {
         <div className="flex flex-col overflow-hidden transition-shadow bg-white rounded-md shadow md:flex-row dark:bg-gray-900 hover:shadow-cardHover">
           <div className="flex flex-col justify-start px-3 py-3 space-y-2 md:w-1/2">
             <p className="flex-1 px-2 font-normal">
-              This large-scale project seeks to uncover characteristics and
-              structural properties of the FSL Twitter network. A graph
-              processing platform to create a dashboard of influential Twitter
-              profiles and a geo-visualization tool are implemented as part of
-              the big data solution.
+              This research project examines the language use and connections of
+              bilingual Twitter users. Using a network analysis approach, the
+              study explores the connections between bilingual Twitter
+              communities, focusing on users who tweet in mutliple languages.
+              The research also includes a geographic visualization component,
+              mapping the locations of bilingual Twitter communities.
             </p>
             <span />
             <a

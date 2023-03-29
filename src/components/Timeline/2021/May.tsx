@@ -8,7 +8,7 @@ export function May() {
     <>
       <DateEntry title="May, 2021" />
       <TimelineEntry
-        title="Building a k-means clustering model using BigQuery ML"
+        title="Building a Clustering Model for Deeper Market Segmentation Insights using BigQuery ML"
         timestamp="May 17, 2021"
         Icon={GitCommit}
         tint="red"
@@ -16,11 +16,12 @@ export function May() {
         <div className="flex flex-col overflow-hidden transition-shadow bg-white rounded-md shadow md:flex-row dark:bg-gray-900 hover:shadow-cardHover">
           <div className="flex flex-col justify-start px-3 py-3 space-y-2 md:w-1/2">
             <p className="flex-1 px-2 font-normal">
-              This notebook guides you through the process of building a k-means
-              clustering model for market segmentation using BigQuery ML,
-              iterating on the model to develop a version that creates the
-              optimal number of clusters, and using cluster analysis evaluation
-              methods such as Davies-Bouldin index
+              This notebook demonstrates how I built a model that can segment a
+              target market into groups based on shared characteristics,
+              allowing businesses to tailor their marketing strategies and
+              messaging for each group. The project aims to provide actionable
+              insights for businesses looking to optimize their marketing
+              approach and maximize their ROI.
             </p>
             <span />
             <a
@@ -46,7 +47,7 @@ export function May() {
       </TimelineEntry>
 
       <TimelineEntry
-        title="Data science tools for knowledge discovery and data mining"
+        title="Timing is Everything: A Notebook Analysis of Frequent Patterns and Optimization Opportunities to Maximize Advertising Impact"
         timestamp="May 16, 2021"
         Icon={GitCommit}
         tint="purple"
@@ -54,10 +55,12 @@ export function May() {
         <div className="flex flex-col overflow-hidden transition-shadow bg-white rounded-md shadow md:flex-row dark:bg-gray-900 hover:shadow-cardHover">
           <div className="flex flex-col justify-start px-3 py-3 space-y-2 md:w-1/2">
             <p className="flex-1 px-2 font-normal">
-              Walkthrough of how to use Pandas &amp; Matplotlib to analyze and
-              answer business questions about efficient advert timings, and
-              further uncovering optimization opportunities using association
-              rule mining to generate frequent patterns
+              This notebook utilizes data analysis techniques to identify the
+              most effective times for advertising, uncovering frequent patterns
+              and optimization opportunities for maximum impact. By examining
+              user engagement and behavior trends, the notebook provides
+              valuable insights and recommendations for optimizing advertising
+              timing strategies.
             </p>
             <span />
             <a
@@ -83,7 +86,7 @@ export function May() {
       </TimelineEntry>
 
       <TimelineEntry
-        title="Amazon Web Services Certified"
+        title="AWS Certified"
         timestamp="May 8, 2021"
         Icon={CheckCircle}
         tint={'green'}
