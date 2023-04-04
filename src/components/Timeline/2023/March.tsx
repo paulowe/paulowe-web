@@ -7,7 +7,7 @@ export function March() {
   return (
     <>
       <DateEntry title="Present" />
-      <TimelineEntry
+      {/* <TimelineEntry
         title="Google and BMO's Analytics Teams Meet in Toronto"
         timestamp="March 16, 2023"
         Icon={Camera}
@@ -43,7 +43,7 @@ export function March() {
             alt="Photo from the competition, Toronto"
           />
         </div>
-      </TimelineEntry>
+      </TimelineEntry> */}
       <TimelineEntry
         title="Tanzania Cassava Disease Image Classification"
         timestamp="March 11, 2023"

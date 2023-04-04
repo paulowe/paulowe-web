@@ -7,7 +7,7 @@ export default function NotFound() {
       <h1>Post not Found</h1>
 
       <Link href={'/paulsmessage'} passHref>
-        <a>&larr; Back to Paul&apos;s Message</a>
+        <a>&larr; Back to AI Blog</a>
       </Link>
     </div>
   )

@@ -42,69 +42,36 @@ function About({ data, summaries }: Props) {
           <div className="flex flex-col space-y-12">
             <div className="flex flex-col prose lg:prose-lg">
               <p>
-                Hey, I&apos;m Paul. I am a Data and Machine Learning Engineer! I
-                currently work at{' '}
-                <a
-                  href="https://www.bmo.com/main/about-bmo/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  BMO Financial Group
+                <a> 👋 Hey, I&apos;m Paul.</a> I am a machine learning
+                practitioner based in Toronto. I have strong technical
+                background in Python, TensorFlow, Dataflow and Spark execution
+                engines. I have successfully applied deep learning techniques to
+                a variety of domains including{' '}
+                <a>
+                  computer vision, natural language processing with
+                  transformers, data analysis and machine learning for
+                  competitive data science
                 </a>
-                . In my role, I wear two hats as both a{' '}
-                <a
-                  href="https://www.credential.net/7cec8ff7-d2b0-4a31-baa4-ed4ff116e7c2"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Cloud Architect
-                </a>{' '}
-                and a{' '}
-                <a
-                  href="https://www.credential.net/3ccde215-74ab-4924-8846-ca7673a47f7c"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Data Engineer
-                </a>
-                . I help the Digital Advertising business implement cloud-based
-                solutions. I am responsible for designing, implementing, and
-                maintaining scalable, secure, and cost-effective cloud-based
-                solutions that meet the needs of the business. This includes
-                designing pipelines, developing software that runs on
-                distributed data processing systems, and productionizing machine
-                learning models. I work closely with data scientists, analysts,
-                and other stakeholders to ensure the data infrastructure meets
-                their needs.
+                . Presently, I focus on supporting businesses in executing large
+                scale analytic programs to achieve their full potential. As both
+                a Cloud Architect and Data Engineer in the team, I implement
+                scalable, secure, and cost-effective cloud-based solutions that
+                meet the needs of the business.
+              </p>
+              <p>Examples of my recent work include </p>
+              <p>
+                <a>Use case in global anti-money laundering</a>: Reduced the
+                risk of money laundering and fraud offences through big data
+                analytic solutions that ensure rules for revealing fraud and
+                money laundering evolve in step with offenders practices.
               </p>
               <p>
-                Before BMO, I worked as a Data Integration Specialist at{' '}
-                <a
-                  href="https://www.td.com/about-tdbfg/corporate-information/corporate-profile/profile.jsp"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  TD Bank Financial Group
-                </a>{' '}
-                where I supported the Transaction Monitoring business to reduce
-                the risk of money laundering and fraud offences. I developed
-                cutting-edge analytics and reporting solutions that spanned
-                across all banking verticals, including payments, mututal funds,
-                lending, and insurance, to ensure that the business rules for
-                revealing fraud and money laundering evolve in step with
-                offenders practices.
+                <a>Use case in digital advertising</a>: Growing acquisition
+                volumes, value and efficiency through deep learning models
+                trained to maximize return on advertising spend.
               </p>
-
               <p>
-                Follow me on{' '}
-                <a
-                  href="https://github.com/paulowe"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub
-                </a>{' '}
-                where I am building in the open, or connect with me on{' '}
+                Let&apos;s build together! Connect with me on{' '}
                 <a
                   href="https://www.linkedin.com/in/paulowe"
                   target="_blank"

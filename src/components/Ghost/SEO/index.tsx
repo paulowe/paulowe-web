@@ -14,7 +14,7 @@ export default function OverthoughtSEO() {
         />
       </Head>
       <NextSeo
-        title={"Paul's Message"}
+        title={'AI Blog'}
         description={'Ideas, analysis and strategy.'}
         openGraph={{
           url: 'https://paulowe.com/paulsmessage',
