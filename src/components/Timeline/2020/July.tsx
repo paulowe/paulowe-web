@@ -59,7 +59,7 @@ export function July() {
       </TimelineEntry>
 
       <TimelineEntry
-        title="Maps4Resources"
+        title="Open Source Contribution: Maps4Resources"
         timestamp="July 4, 2020"
         Icon={Zap}
         tint="blue"

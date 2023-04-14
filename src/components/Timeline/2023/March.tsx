@@ -45,7 +45,7 @@ export function March() {
         </div>
       </TimelineEntry> */}
       <TimelineEntry
-        title="Tanzania Cassava Disease Image Classification"
+        title="Convolutional Neural Networks for Sustainable Agriculture"
         timestamp="March 11, 2023"
         Icon={GitCommit}
         tint="red"

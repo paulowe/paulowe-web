@@ -43,20 +43,29 @@ function About({ data, summaries }: Props) {
             <div className="flex flex-col prose lg:prose-lg">
               <p>
                 <a> 👋 Hey, I&apos;m Paul.</a> I am a machine learning
-                practitioner based in Toronto. I have strong technical
-                background in Python, TensorFlow, Dataflow and Spark execution
-                engines. I have successfully applied deep learning techniques to
-                a variety of domains including{' '}
+                practitioner based in Toronto. Over the past 5+ years, I have
+                been designing and building intelligent applications and web
+                experiences. I am a builder at heart, and my passion for making
+                an impact in society drives my work.
+              </p>
+              <p>
+                I have strong technical background in Python, TensorFlow,
+                Dataflow and Spark execution engines, and have successfully
+                applied deep learning techniques to a variety of domains
+                including{' '}
                 <a>
                   computer vision, natural language processing with
                   transformers, data analysis and machine learning for
                   competitive data science
                 </a>
-                . Presently, I focus on supporting businesses in executing large
-                scale analytic programs to achieve their full potential. As both
-                a Cloud Architect and Data Engineer in the team, I implement
-                scalable, secure, and cost-effective cloud-based solutions that
-                meet the needs of the business.
+                .
+              </p>
+              <p>
+                Presently, I focus on supporting businesses in executing large
+                scale analytic programs to achieve their full potential. As a
+                Cloud Data and ML Engineer, I implement scalable, secure, and
+                cost-effective cloud-based solutions that meet the needs of the
+                business.
               </p>
               <p>Examples of my recent work include </p>
               <p>
@@ -67,8 +76,10 @@ function About({ data, summaries }: Props) {
               </p>
               <p>
                 <a>Use case in digital advertising</a>: Growing acquisition
-                volumes, value and efficiency through deep learning models
-                trained to maximize return on advertising spend.
+                volumes, value and efficiency leveraging standardized processes
+                and technology capabilities for building, deploying, and
+                operationalizing ML systems to maximize return on advertising
+                spend.
               </p>
               <p>
                 Let&apos;s build together! Connect with me on{' '}
@@ -199,7 +210,7 @@ function About({ data, summaries }: Props) {
 
             <div className="flex flex-col space-y-4">
               <div className="flex flex-col space-y-1">
-                <h4>Projects</h4>
+                <h4>Software Engineering Projects</h4>
                 <p className="text-lg">Weekend hacks for fun and learning.</p>
               </div>
               <div className="flex flex-col space-y-1">
