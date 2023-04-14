@@ -7,15 +7,15 @@ export function March() {
   return (
     <>
       <DateEntry title="Present" />
-      {/* <TimelineEntry
-        title="Google and BMO's Analytics Teams Meet in Toronto"
+      <TimelineEntry
+        title="Exploring the Future of Marketing Analytics"
         timestamp="March 16, 2023"
         Icon={Camera}
+        tint="green"
       >
         <p>
-          Innovation takes center stage as Google and BMO&apos;s Cloud and
-          Advanced Analytics teams convene to share expertise and insights on
-          the future of marketing.
+          Innovation takes center stage as Google and BMO convene to share
+          expertise and insights on the future of marketing.
         </p>
         <div className="grid grid-cols-2 grid-rows-2 gap-2">
           <Image
@@ -43,7 +43,7 @@ export function March() {
             alt="Photo from the competition, Toronto"
           />
         </div>
-      </TimelineEntry> */}
+      </TimelineEntry>
       <TimelineEntry
         title="Convolutional Neural Networks for Sustainable Agriculture"
         timestamp="March 11, 2023"
