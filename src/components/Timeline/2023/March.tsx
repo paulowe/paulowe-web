@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Zap, CheckCircle, Camera, GitCommit } from 'react-feather'
+import { Zap, CheckCircle, Camera, GitCommit, Plus } from 'react-feather'
 import Image from 'next/image'
 import { DateEntry, Notes, TimelineEntry } from '../Entry'
 
@@ -47,8 +47,8 @@ export function March() {
       <TimelineEntry
         title="Convolutional Neural Networks for Sustainable Agriculture"
         timestamp="March 11, 2023"
-        Icon={GitCommit}
-        tint="red"
+        Icon={Plus}
+        tint="blue"
       >
         <div className="flex flex-col overflow-hidden transition-shadow bg-white rounded-md shadow md:flex-row dark:bg-gray-900 hover:shadow-cardHover">
           <div className="flex flex-col justify-start px-3 py-3 space-y-2 md:w-1/2">
