@@ -8,14 +8,17 @@ export function March() {
     <>
       <DateEntry title="Present" />
       <TimelineEntry
-        title="Exploring the Future of Marketing Analytics"
+        title="Building the Future of Marketing Analytics"
         timestamp="March 16, 2023"
         Icon={Camera}
         tint="green"
       >
         <p>
           Innovation takes center stage as Google and BMO convene to share
-          expertise and insights on the future of marketing.
+          expertise and insights on the future of marketing. Driven by our
+          teams&apos; shared passion for innovation, this collaboration promises
+          to deliver unique strategies and solutions that sets the bar high for
+          the industry.
         </p>
         <div className="grid grid-cols-2 grid-rows-2 gap-2">
           <Image
