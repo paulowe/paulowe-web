@@ -31,7 +31,7 @@ function About({ data, summaries }: Props) {
           <div className="-mx-0 -mt-0 md:mt-0 md:-mx-0 ">
             <Image
               // src="https://d2fl8krjhnb3wd.cloudfront.net/static/img/about.png"
-              src="/static/img/me.jpg"
+              src="/static/img/me-2023.jpg"
               alt={'A photo of me'}
               layout="responsive"
               width="1000"
