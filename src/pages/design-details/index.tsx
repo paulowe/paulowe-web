@@ -9,7 +9,7 @@ export default function DesignDetails() {
   return (
     <Page>
       <NextSeo
-        title={'Research'}
+        title={'Deep Learning Apps'}
         description={'In-depth AI explorations.'}
         openGraph={{
           url: 'https://paulowe.com/design-details',
@@ -28,9 +28,11 @@ export default function DesignDetails() {
       <CenteredColumn>
         <div className="flex flex-col space-y-8">
           <PageHeader
-            title="AI Research"
-            subtitle="Exploring the best artificially intelligent software platforms. Coming Soon!"
+            title="Deep Learning Apps"
+            subtitle="Designing the best deep learning apps using the latest computer vision, natural language and robotics technologies"
           />
+          <p>Launching soon!</p>
+          {/* <DesignDetailsGrid summaries={summaries} /> */}
         </div>
       </CenteredColumn>
     </Page>

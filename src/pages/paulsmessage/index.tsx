@@ -21,10 +21,7 @@ function Overthought({ data }: Props) {
 
       <CenteredColumn>
         <div className="flex flex-col space-y-14">
-          <PageHeader
-            title=" Paul's Message "
-            subtitle="Thoughts, stories and ideas."
-          />
+          <PageHeader title="AI Blog" subtitle="Ideas, analysis and strategy" />
 
           <OverthoughtSubscribeBox />
           {data && data.posts && <OverthoughtList posts={data.posts} />}

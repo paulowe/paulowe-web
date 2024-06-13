@@ -27,7 +27,7 @@ export function July() {
         <>
           <Notes>
             <p>
-              Today I attended the{' '}
+              I attended the{' '}
               <a
                 href="https://pages.awscloud.com/aws-africa-region-virtual-day#form-2"
                 target="_blank"
@@ -59,7 +59,7 @@ export function July() {
       </TimelineEntry>
 
       <TimelineEntry
-        title="Maps4Resources"
+        title="Open Source Contribution: Maps4Resources"
         timestamp="July 4, 2020"
         Icon={Zap}
         tint="blue"

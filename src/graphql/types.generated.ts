@@ -8,10 +8,13 @@ export type Maybe<T> = T | null
 export type Exact<T extends { [key: string]: unknown }> = {
   [K in keyof T]: T[K]
 }
-export type MakeOptional<T, K extends keyof T> = Omit<T, K> &
-  { [SubKey in K]?: Maybe<T[SubKey]> }
-export type MakeMaybe<T, K extends keyof T> = Omit<T, K> &
-  { [SubKey in K]: Maybe<T[SubKey]> }
+export type MakeOptional<T, K extends keyof T> = Omit<T, K> & {
+  [SubKey in K]?: Maybe<T[SubKey]>
+}
+export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & {
+  [SubKey in K]: Maybe<T[SubKey]>
+}
+const defaultOptions = {}
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
   ID: string
@@ -21,35 +24,20 @@ export type Scalars = {
   Float: number
 }
 
-export type Post = {
-  __typename?: 'Post'
-  canonical_url?: Maybe<Scalars['String']>
-  codeinjection_foot?: Maybe<Scalars['String']>
-  codeinjection_head?: Maybe<Scalars['String']>
-  comment_id?: Maybe<Scalars['String']>
-  created_at?: Maybe<Scalars['String']>
-  custom_excerpt?: Maybe<Scalars['String']>
-  excerpt?: Maybe<Scalars['String']>
-  feature_image?: Maybe<Scalars['String']>
-  featured?: Maybe<Scalars['Boolean']>
-  html?: Maybe<Scalars['String']>
-  id?: Maybe<Scalars['String']>
-  meta_description?: Maybe<Scalars['String']>
-  meta_title?: Maybe<Scalars['String']>
-  og_description?: Maybe<Scalars['String']>
-  og_image?: Maybe<Scalars['String']>
-  og_title?: Maybe<Scalars['String']>
-  published_at?: Maybe<Scalars['String']>
-  reading_time?: Maybe<Scalars['Int']>
-  slug?: Maybe<Scalars['String']>
-  title?: Maybe<Scalars['String']>
-  twitter_description?: Maybe<Scalars['String']>
-  twitter_image?: Maybe<Scalars['String']>
-  twitter_title?: Maybe<Scalars['String']>
-  updated_at?: Maybe<Scalars['String']>
-  url?: Maybe<Scalars['String']>
-  uuid?: Maybe<Scalars['String']>
-  visibility?: Maybe<Scalars['String']>
+export type Ama = {
+  __typename?: 'AMA'
+  id: Scalars['String']
+  question: Scalars['String']
+  status?: Maybe<AmaStatus>
+  answer?: Maybe<Scalars['String']>
+  createdAt?: Maybe<Scalars['String']>
+  updatedAt?: Maybe<Scalars['String']>
+  reactions?: Maybe<Scalars['Int']>
+}
+
+export enum AmaStatus {
+  Pending = 'PENDING',
+  Answered = 'ANSWERED',
 }
 
 export type Bookmark = {
@@ -79,59 +67,6 @@ export type Episode = {
   status?: Maybe<Scalars['String']>
   title?: Maybe<Scalars['String']>
   token?: Maybe<Scalars['String']>
-}
-
-export type Repo = {
-  __typename?: 'Repo'
-  org?: Maybe<Scalars['String']>
-  name?: Maybe<Scalars['String']>
-  description?: Maybe<Scalars['String']>
-  stars?: Maybe<Scalars['Int']>
-}
-
-export enum AmaStatus {
-  Pending = 'PENDING',
-  Answered = 'ANSWERED',
-}
-
-export type Ama = {
-  __typename?: 'AMA'
-  id: Scalars['String']
-  question: Scalars['String']
-  status?: Maybe<AmaStatus>
-  answer?: Maybe<Scalars['String']>
-  createdAt?: Maybe<Scalars['String']>
-  updatedAt?: Maybe<Scalars['String']>
-  reactions?: Maybe<Scalars['Int']>
-}
-
-export type Query = {
-  __typename?: 'Query'
-  bookmarks: Array<Maybe<Bookmark>>
-  episodes: Array<Maybe<Episode>>
-  posts: Array<Maybe<Post>>
-  post?: Maybe<Post>
-  amaQuestions: Array<Maybe<Ama>>
-  repos: Array<Maybe<Repo>>
-  isMe?: Maybe<Scalars['Boolean']>
-}
-
-export type QueryBookmarksArgs = {
-  skip?: Maybe<Scalars['Int']>
-  category?: Maybe<Scalars['String']>
-}
-
-export type QueryPostsArgs = {
-  first?: Maybe<Scalars['Int']>
-}
-
-export type QueryPostArgs = {
-  slug: Scalars['String']
-}
-
-export type QueryAmaQuestionsArgs = {
-  skip?: Maybe<Scalars['Int']>
-  status?: Maybe<AmaStatus>
 }
 
 export type Mutation = {
@@ -192,6 +127,74 @@ export type MutationEditAmaQuestionArgs = {
 
 export type MutationAddAmaReactionArgs = {
   id: Scalars['ID']
+}
+
+export type Post = {
+  __typename?: 'Post'
+  canonical_url?: Maybe<Scalars['String']>
+  codeinjection_foot?: Maybe<Scalars['String']>
+  codeinjection_head?: Maybe<Scalars['String']>
+  comment_id?: Maybe<Scalars['String']>
+  created_at?: Maybe<Scalars['String']>
+  custom_excerpt?: Maybe<Scalars['String']>
+  excerpt?: Maybe<Scalars['String']>
+  feature_image?: Maybe<Scalars['String']>
+  featured?: Maybe<Scalars['Boolean']>
+  html?: Maybe<Scalars['String']>
+  id?: Maybe<Scalars['String']>
+  meta_description?: Maybe<Scalars['String']>
+  meta_title?: Maybe<Scalars['String']>
+  og_description?: Maybe<Scalars['String']>
+  og_image?: Maybe<Scalars['String']>
+  og_title?: Maybe<Scalars['String']>
+  published_at?: Maybe<Scalars['String']>
+  reading_time?: Maybe<Scalars['Int']>
+  slug?: Maybe<Scalars['String']>
+  title?: Maybe<Scalars['String']>
+  twitter_description?: Maybe<Scalars['String']>
+  twitter_image?: Maybe<Scalars['String']>
+  twitter_title?: Maybe<Scalars['String']>
+  updated_at?: Maybe<Scalars['String']>
+  url?: Maybe<Scalars['String']>
+  uuid?: Maybe<Scalars['String']>
+  visibility?: Maybe<Scalars['String']>
+}
+
+export type Query = {
+  __typename?: 'Query'
+  bookmarks: Array<Maybe<Bookmark>>
+  episodes: Array<Maybe<Episode>>
+  posts: Array<Maybe<Post>>
+  post?: Maybe<Post>
+  amaQuestions: Array<Maybe<Ama>>
+  repos: Array<Maybe<Repo>>
+  isMe?: Maybe<Scalars['Boolean']>
+}
+
+export type QueryBookmarksArgs = {
+  skip?: Maybe<Scalars['Int']>
+  category?: Maybe<Scalars['String']>
+}
+
+export type QueryPostsArgs = {
+  first?: Maybe<Scalars['Int']>
+}
+
+export type QueryPostArgs = {
+  slug: Scalars['String']
+}
+
+export type QueryAmaQuestionsArgs = {
+  skip?: Maybe<Scalars['Int']>
+  status?: Maybe<AmaStatus>
+}
+
+export type Repo = {
+  __typename?: 'Repo'
+  org?: Maybe<Scalars['String']>
+  name?: Maybe<Scalars['String']>
+  description?: Maybe<Scalars['String']>
+  stars?: Maybe<Scalars['Int']>
 }
 
 export type AmaInfoFragment = {
@@ -505,15 +508,17 @@ export function useEditAmaQuestionMutation(
     EditAmaQuestionMutationVariables
   >
 ) {
+  const options = { ...defaultOptions, ...baseOptions }
   return Apollo.useMutation<
     EditAmaQuestionMutation,
     EditAmaQuestionMutationVariables
-  >(EditAmaQuestionDocument, baseOptions)
+  >(EditAmaQuestionDocument, options)
 }
 export type EditAmaQuestionMutationHookResult = ReturnType<
   typeof useEditAmaQuestionMutation
 >
-export type EditAmaQuestionMutationResult = Apollo.MutationResult<EditAmaQuestionMutation>
+export type EditAmaQuestionMutationResult =
+  Apollo.MutationResult<EditAmaQuestionMutation>
 export type EditAmaQuestionMutationOptions = Apollo.BaseMutationOptions<
   EditAmaQuestionMutation,
   EditAmaQuestionMutationVariables
@@ -551,15 +556,17 @@ export function useDeleteAmaQuestionMutation(
     DeleteAmaQuestionMutationVariables
   >
 ) {
+  const options = { ...defaultOptions, ...baseOptions }
   return Apollo.useMutation<
     DeleteAmaQuestionMutation,
     DeleteAmaQuestionMutationVariables
-  >(DeleteAmaQuestionDocument, baseOptions)
+  >(DeleteAmaQuestionDocument, options)
 }
 export type DeleteAmaQuestionMutationHookResult = ReturnType<
   typeof useDeleteAmaQuestionMutation
 >
-export type DeleteAmaQuestionMutationResult = Apollo.MutationResult<DeleteAmaQuestionMutation>
+export type DeleteAmaQuestionMutationResult =
+  Apollo.MutationResult<DeleteAmaQuestionMutation>
 export type DeleteAmaQuestionMutationOptions = Apollo.BaseMutationOptions<
   DeleteAmaQuestionMutation,
   DeleteAmaQuestionMutationVariables
@@ -597,15 +604,17 @@ export function useAddAmaQuestionMutation(
     AddAmaQuestionMutationVariables
   >
 ) {
+  const options = { ...defaultOptions, ...baseOptions }
   return Apollo.useMutation<
     AddAmaQuestionMutation,
     AddAmaQuestionMutationVariables
-  >(AddAmaQuestionDocument, baseOptions)
+  >(AddAmaQuestionDocument, options)
 }
 export type AddAmaQuestionMutationHookResult = ReturnType<
   typeof useAddAmaQuestionMutation
 >
-export type AddAmaQuestionMutationResult = Apollo.MutationResult<AddAmaQuestionMutation>
+export type AddAmaQuestionMutationResult =
+  Apollo.MutationResult<AddAmaQuestionMutation>
 export type AddAmaQuestionMutationOptions = Apollo.BaseMutationOptions<
   AddAmaQuestionMutation,
   AddAmaQuestionMutationVariables
@@ -646,15 +655,17 @@ export function useAddAmaReactionMutation(
     AddAmaReactionMutationVariables
   >
 ) {
+  const options = { ...defaultOptions, ...baseOptions }
   return Apollo.useMutation<
     AddAmaReactionMutation,
     AddAmaReactionMutationVariables
-  >(AddAmaReactionDocument, baseOptions)
+  >(AddAmaReactionDocument, options)
 }
 export type AddAmaReactionMutationHookResult = ReturnType<
   typeof useAddAmaReactionMutation
 >
-export type AddAmaReactionMutationResult = Apollo.MutationResult<AddAmaReactionMutation>
+export type AddAmaReactionMutationResult =
+  Apollo.MutationResult<AddAmaReactionMutation>
 export type AddAmaReactionMutationOptions = Apollo.BaseMutationOptions<
   AddAmaReactionMutation,
   AddAmaReactionMutationVariables
@@ -692,9 +703,10 @@ export function useLoginMutation(
     LoginMutationVariables
   >
 ) {
+  const options = { ...defaultOptions, ...baseOptions }
   return Apollo.useMutation<LoginMutation, LoginMutationVariables>(
     LoginDocument,
-    baseOptions
+    options
   )
 }
 export type LoginMutationHookResult = ReturnType<typeof useLoginMutation>
@@ -735,9 +747,10 @@ export function useLogoutMutation(
     LogoutMutationVariables
   >
 ) {
+  const options = { ...defaultOptions, ...baseOptions }
   return Apollo.useMutation<LogoutMutation, LogoutMutationVariables>(
     LogoutDocument,
-    baseOptions
+    options
   )
 }
 export type LogoutMutationHookResult = ReturnType<typeof useLogoutMutation>
@@ -798,15 +811,17 @@ export function useEditBookmarkMutation(
     EditBookmarkMutationVariables
   >
 ) {
+  const options = { ...defaultOptions, ...baseOptions }
   return Apollo.useMutation<
     EditBookmarkMutation,
     EditBookmarkMutationVariables
-  >(EditBookmarkDocument, baseOptions)
+  >(EditBookmarkDocument, options)
 }
 export type EditBookmarkMutationHookResult = ReturnType<
   typeof useEditBookmarkMutation
 >
-export type EditBookmarkMutationResult = Apollo.MutationResult<EditBookmarkMutation>
+export type EditBookmarkMutationResult =
+  Apollo.MutationResult<EditBookmarkMutation>
 export type EditBookmarkMutationOptions = Apollo.BaseMutationOptions<
   EditBookmarkMutation,
   EditBookmarkMutationVariables
@@ -844,15 +859,17 @@ export function useDeleteBookmarkMutation(
     DeleteBookmarkMutationVariables
   >
 ) {
+  const options = { ...defaultOptions, ...baseOptions }
   return Apollo.useMutation<
     DeleteBookmarkMutation,
     DeleteBookmarkMutationVariables
-  >(DeleteBookmarkDocument, baseOptions)
+  >(DeleteBookmarkDocument, options)
 }
 export type DeleteBookmarkMutationHookResult = ReturnType<
   typeof useDeleteBookmarkMutation
 >
-export type DeleteBookmarkMutationResult = Apollo.MutationResult<DeleteBookmarkMutation>
+export type DeleteBookmarkMutationResult =
+  Apollo.MutationResult<DeleteBookmarkMutation>
 export type DeleteBookmarkMutationOptions = Apollo.BaseMutationOptions<
   DeleteBookmarkMutation,
   DeleteBookmarkMutationVariables
@@ -906,15 +923,17 @@ export function useAddBookmarkMutation(
     AddBookmarkMutationVariables
   >
 ) {
+  const options = { ...defaultOptions, ...baseOptions }
   return Apollo.useMutation<AddBookmarkMutation, AddBookmarkMutationVariables>(
     AddBookmarkDocument,
-    baseOptions
+    options
   )
 }
 export type AddBookmarkMutationHookResult = ReturnType<
   typeof useAddBookmarkMutation
 >
-export type AddBookmarkMutationResult = Apollo.MutationResult<AddBookmarkMutation>
+export type AddBookmarkMutationResult =
+  Apollo.MutationResult<AddBookmarkMutation>
 export type AddBookmarkMutationOptions = Apollo.BaseMutationOptions<
   AddBookmarkMutation,
   AddBookmarkMutationVariables
@@ -955,15 +974,17 @@ export function useAddBookmarkReactionMutation(
     AddBookmarkReactionMutationVariables
   >
 ) {
+  const options = { ...defaultOptions, ...baseOptions }
   return Apollo.useMutation<
     AddBookmarkReactionMutation,
     AddBookmarkReactionMutationVariables
-  >(AddBookmarkReactionDocument, baseOptions)
+  >(AddBookmarkReactionDocument, options)
 }
 export type AddBookmarkReactionMutationHookResult = ReturnType<
   typeof useAddBookmarkReactionMutation
 >
-export type AddBookmarkReactionMutationResult = Apollo.MutationResult<AddBookmarkReactionMutation>
+export type AddBookmarkReactionMutationResult =
+  Apollo.MutationResult<AddBookmarkReactionMutation>
 export type AddBookmarkReactionMutationOptions = Apollo.BaseMutationOptions<
   AddBookmarkReactionMutation,
   AddBookmarkReactionMutationVariables
@@ -1000,9 +1021,10 @@ export function useGetAmaQuestionsQuery(
     GetAmaQuestionsQueryVariables
   >
 ) {
+  const options = { ...defaultOptions, ...baseOptions }
   return Apollo.useQuery<GetAmaQuestionsQuery, GetAmaQuestionsQueryVariables>(
     GetAmaQuestionsDocument,
-    baseOptions
+    options
   )
 }
 export function useGetAmaQuestionsLazyQuery(
@@ -1011,10 +1033,11 @@ export function useGetAmaQuestionsLazyQuery(
     GetAmaQuestionsQueryVariables
   >
 ) {
+  const options = { ...defaultOptions, ...baseOptions }
   return Apollo.useLazyQuery<
     GetAmaQuestionsQuery,
     GetAmaQuestionsQueryVariables
-  >(GetAmaQuestionsDocument, baseOptions)
+  >(GetAmaQuestionsDocument, options)
 }
 export type GetAmaQuestionsQueryHookResult = ReturnType<
   typeof useGetAmaQuestionsQuery
@@ -1058,9 +1081,10 @@ export function useGetBookmarksQuery(
     GetBookmarksQueryVariables
   >
 ) {
+  const options = { ...defaultOptions, ...baseOptions }
   return Apollo.useQuery<GetBookmarksQuery, GetBookmarksQueryVariables>(
     GetBookmarksDocument,
-    baseOptions
+    options
   )
 }
 export function useGetBookmarksLazyQuery(
@@ -1069,9 +1093,10 @@ export function useGetBookmarksLazyQuery(
     GetBookmarksQueryVariables
   >
 ) {
+  const options = { ...defaultOptions, ...baseOptions }
   return Apollo.useLazyQuery<GetBookmarksQuery, GetBookmarksQueryVariables>(
     GetBookmarksDocument,
-    baseOptions
+    options
   )
 }
 export type GetBookmarksQueryHookResult = ReturnType<
@@ -1114,9 +1139,10 @@ export function useGetEpisodesQuery(
     GetEpisodesQueryVariables
   >
 ) {
+  const options = { ...defaultOptions, ...baseOptions }
   return Apollo.useQuery<GetEpisodesQuery, GetEpisodesQueryVariables>(
     GetEpisodesDocument,
-    baseOptions
+    options
   )
 }
 export function useGetEpisodesLazyQuery(
@@ -1125,9 +1151,10 @@ export function useGetEpisodesLazyQuery(
     GetEpisodesQueryVariables
   >
 ) {
+  const options = { ...defaultOptions, ...baseOptions }
   return Apollo.useLazyQuery<GetEpisodesQuery, GetEpisodesQueryVariables>(
     GetEpisodesDocument,
-    baseOptions
+    options
   )
 }
 export type GetEpisodesQueryHookResult = ReturnType<typeof useGetEpisodesQuery>
@@ -1169,17 +1196,19 @@ export const GetHomeDocument = gql`
 export function useGetHomeQuery(
   baseOptions?: Apollo.QueryHookOptions<GetHomeQuery, GetHomeQueryVariables>
 ) {
+  const options = { ...defaultOptions, ...baseOptions }
   return Apollo.useQuery<GetHomeQuery, GetHomeQueryVariables>(
     GetHomeDocument,
-    baseOptions
+    options
   )
 }
 export function useGetHomeLazyQuery(
   baseOptions?: Apollo.LazyQueryHookOptions<GetHomeQuery, GetHomeQueryVariables>
 ) {
+  const options = { ...defaultOptions, ...baseOptions }
   return Apollo.useLazyQuery<GetHomeQuery, GetHomeQueryVariables>(
     GetHomeDocument,
-    baseOptions
+    options
   )
 }
 export type GetHomeQueryHookResult = ReturnType<typeof useGetHomeQuery>
@@ -1212,17 +1241,16 @@ export const IsMeDocument = gql`
 export function useIsMeQuery(
   baseOptions?: Apollo.QueryHookOptions<IsMeQuery, IsMeQueryVariables>
 ) {
-  return Apollo.useQuery<IsMeQuery, IsMeQueryVariables>(
-    IsMeDocument,
-    baseOptions
-  )
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useQuery<IsMeQuery, IsMeQueryVariables>(IsMeDocument, options)
 }
 export function useIsMeLazyQuery(
   baseOptions?: Apollo.LazyQueryHookOptions<IsMeQuery, IsMeQueryVariables>
 ) {
+  const options = { ...defaultOptions, ...baseOptions }
   return Apollo.useLazyQuery<IsMeQuery, IsMeQueryVariables>(
     IsMeDocument,
-    baseOptions
+    options
   )
 }
 export type IsMeQueryHookResult = ReturnType<typeof useIsMeQuery>
@@ -1255,9 +1283,10 @@ export const GetPostsDocument = gql`
 export function useGetPostsQuery(
   baseOptions?: Apollo.QueryHookOptions<GetPostsQuery, GetPostsQueryVariables>
 ) {
+  const options = { ...defaultOptions, ...baseOptions }
   return Apollo.useQuery<GetPostsQuery, GetPostsQueryVariables>(
     GetPostsDocument,
-    baseOptions
+    options
   )
 }
 export function useGetPostsLazyQuery(
@@ -1266,9 +1295,10 @@ export function useGetPostsLazyQuery(
     GetPostsQueryVariables
   >
 ) {
+  const options = { ...defaultOptions, ...baseOptions }
   return Apollo.useLazyQuery<GetPostsQuery, GetPostsQueryVariables>(
     GetPostsDocument,
-    baseOptions
+    options
   )
 }
 export type GetPostsQueryHookResult = ReturnType<typeof useGetPostsQuery>
@@ -1308,17 +1338,19 @@ export const GetPostDocument = gql`
 export function useGetPostQuery(
   baseOptions: Apollo.QueryHookOptions<GetPostQuery, GetPostQueryVariables>
 ) {
+  const options = { ...defaultOptions, ...baseOptions }
   return Apollo.useQuery<GetPostQuery, GetPostQueryVariables>(
     GetPostDocument,
-    baseOptions
+    options
   )
 }
 export function useGetPostLazyQuery(
   baseOptions?: Apollo.LazyQueryHookOptions<GetPostQuery, GetPostQueryVariables>
 ) {
+  const options = { ...defaultOptions, ...baseOptions }
   return Apollo.useLazyQuery<GetPostQuery, GetPostQueryVariables>(
     GetPostDocument,
-    baseOptions
+    options
   )
 }
 export type GetPostQueryHookResult = ReturnType<typeof useGetPostQuery>

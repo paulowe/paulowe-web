@@ -44,7 +44,7 @@ export default sentryAPIHandler(
     */
     const ref =
       test || process.env.NODE_ENV !== 'production'
-        ? db.collection(COLLECTION).where('email', '==', 'pcowe@my.yorku.ca')
+        ? db.collection(COLLECTION).where('email', '==', 'paul.owe@live.com')
         : db.collection(COLLECTION)
 
     let count = 0
@@ -59,7 +59,7 @@ export default sentryAPIHandler(
 
         count = count + 1
         await postmark.sendEmailWithTemplate({
-          From: 'pcowe@my.yorku.ca',
+          From: 'paul.owe@live.com',
           To: user.email,
           TemplateId: 18037634,
           TemplateModel: {

@@ -17,26 +17,26 @@ export function Footer() {
           </Link>
 
           <a
-            href="https://twitter.com/1paulowe"
+            href="https://github.com/paulowe"
             target="_blank"
             rel="noopener noreferrer"
             className="black-link"
           >
-            @1paulowe
+            GitHub
           </a>
           <a
-            href="https://twitter.com/0brainlab"
+            href="https://www.kaggle.com/paulowe/code"
             target="_blank"
             rel="noopener noreferrer"
             className="black-link"
           >
-            @0brainlab
+            Kaggle
           </a>
         </div>
 
         <div className="flex flex-col space-y-4">
           <Link href="/paulsmessage" as="/paulsmessage" passHref>
-            <a className="black-link">Writing</a>
+            <a className="black-link">AI Blog</a>
           </Link>
 
           <a
@@ -44,23 +44,12 @@ export function Footer() {
             rel="noopener noreferrer"
             className="black-link"
           >
-            CV
+            Deep Learning Apps
           </a>
 
-          <a
-            href="https://d2fl8krjhnb3wd.cloudfront.net/static/docs/resume-pcowe.pdf"
-            rel="noopener noreferrer"
-            className="black-link"
-          >
-            Resumé
-          </a>
-          <a
-            href="https://paulsmessage.com"
-            rel="noopener noreferrer"
-            className="black-link"
-          >
-            Blog
-          </a>
+          <Link href="/security" as="/security" passHref>
+            <a className="black-link">Security Checklist</a>
+          </Link>
         </div>
 
         <div className="flex flex-col space-y-4">
@@ -74,10 +63,6 @@ export function Footer() {
 
           <Link href="/stack" as="/stack" passHref>
             <a className="black-link">My Stack</a>
-          </Link>
-
-          <Link href="/security" as="/security" passHref>
-            <a className="black-link">Security Checklist</a>
           </Link>
         </div>
       </div>

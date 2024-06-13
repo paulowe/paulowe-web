@@ -18,8 +18,8 @@ interface EmailMeProps {
 
 export function emailMe({ subject, body }: EmailMeProps) {
   return client.sendEmail({
-    From: 'pcowe@my.yorku.ca',
-    To: 'pcowe@my.yorku.ca',
+    From: 'paul.owe@live.com',
+    To: 'paul.owe@live.com',
     Subject: subject,
     TextBody: body,
   })

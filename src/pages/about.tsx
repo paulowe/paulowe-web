@@ -31,7 +31,7 @@ function About({ data, summaries }: Props) {
           <div className="-mx-0 -mt-0 md:mt-0 md:-mx-0 ">
             <Image
               // src="https://d2fl8krjhnb3wd.cloudfront.net/static/img/about.png"
-              src="/static/img/me.jpg"
+              src="/static/img/me-2023.jpg"
               alt={'A photo of me'}
               layout="responsive"
               width="1000"
@@ -42,64 +42,55 @@ function About({ data, summaries }: Props) {
           <div className="flex flex-col space-y-12">
             <div className="flex flex-col prose lg:prose-lg">
               <p>
-                Paul is a multi cloud certified{' '}
-                <a
-                  href="https://www.credential.net/7cec8ff7-d2b0-4a31-baa4-ed4ff116e7c2"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Professional Cloud Architect
-                </a>{' '}
-                at{' '}
-                <a
-                  href="https://www.bmo.com/main/about-bmo/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  BMO Financial Group
-                </a>
-                . He helps the organization with a variety of data challenges,
-                from ensuring the architecture meets the business needs to
-                attaining robust insights, and uncovering missed opportunities.
-                With his expertise in Data Engineering, and a myriad of
-                capabilities, he enables the Digital Acquisition business
-                effectively leverage Data and AI-driven strategies.
+                <a> 👋 Hey, I&apos;m Paul.</a> I am a machine learning
+                practitioner based in Toronto. Over the past 5+ years, I have
+                been designing and building intelligent applications and web
+                experiences. I am a builder at heart, and my passion for making
+                an impact in society drives my work.
               </p>
               <p>
-                Before BMO, he worked as a Business System Analyst at{' '}
-                <a
-                  href="https://www.td.com/about-tdbfg/corporate-information/corporate-profile/profile.jsp"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  TD Bank Financial Group
-                </a>{' '}
-                where he supported the Transaction Monitoring business to reduce
-                the risk of money laundering and fraud offences. He developed
-                robust analytics and reporting solutions that encompass all
-                banking verticals (including payments, mututal funds, lending,
-                and insurance) to ensure business rules for revealing fraud and
+                I have strong technical background in Python, TensorFlow,
+                Dataflow and Spark execution engines, and have successfully
+                applied deep learning techniques to a variety of domains
+                including{' '}
+                <a>
+                  computer vision, natural language processing with
+                  transformers, data analysis and machine learning for
+                  competitive data science
+                </a>
+                .
+              </p>
+              <p>
+                Presently, I focus on supporting businesses in executing large
+                scale analytic programs to achieve their full potential. As a
+                Cloud Data and ML Engineer, I implement scalable, secure, and
+                cost-effective cloud-based solutions that meet the needs of the
+                business.
+              </p>
+              <p>Examples of my recent work include </p>
+              <p>
+                <a>Use case in global anti-money laundering</a>: Reduced the
+                risk of money laundering and fraud offences through big data
+                analytic solutions that ensure rules for revealing fraud and
                 money laundering evolve in step with offenders practices.
               </p>
-
               <p>
-                You can find him on{' '}
-                <a
-                  href="https://github.com/paulowe"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub
-                </a>{' '}
-                where he is building in the open, or on{' '}
+                <a>Use case in digital advertising</a>: Growing acquisition
+                volumes, value and efficiency leveraging standardized processes
+                and technology capabilities for building, deploying, and
+                operationalizing ML systems to maximize return on advertising
+                spend.
+              </p>
+              <p>
+                Let&apos;s build together! Connect with me on{' '}
                 <a
                   href="https://www.linkedin.com/in/paulowe"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   LinkedIn
-                </a>{' '}
-                for professional networking.
+                </a>
+                .{' '}
               </p>
             </div>
             <div className="-mx-0 -mt-0 md:mt-0 md:-mx-0 ">
@@ -117,9 +108,9 @@ function About({ data, summaries }: Props) {
 
             <div className="flex flex-col space-y-4">
               <div className="flex flex-col space-y-1">
-                <h4>Writing</h4>
+                <h4>AI Blog</h4>
 
-                <p className="text-lg">Thoughts, stories and ideas.</p>
+                <p className="text-lg">Ideas, analysis and strategy.</p>
               </div>
 
               {data && data.posts && <OverthoughtList posts={data.posts} />}
@@ -131,14 +122,14 @@ function About({ data, summaries }: Props) {
                   </a>
                 </Link>
 
-                <a
+                {/* <a
                   href="https://paulsmessage.com/rss/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 dark:text-blue-500"
                 >
                   Subscribe via RSS &rarr;
-                </a>
+                </a> */}
               </div>
             </div>
 
@@ -219,7 +210,7 @@ function About({ data, summaries }: Props) {
 
             <div className="flex flex-col space-y-4">
               <div className="flex flex-col space-y-1">
-                <h4>Projects</h4>
+                <h4>Software Engineering Projects</h4>
                 <p className="text-lg">Weekend hacks for fun and learning.</p>
               </div>
               <div className="flex flex-col space-y-1">
